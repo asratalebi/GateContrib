@@ -70,24 +70,6 @@
 /gate/physics/processList Initialized
 
 #=================================================================
-# INITIALISATION
-#=================================================================
-
-/gate/run/initialize
-
-#=================================================================
-# VISUALISATION
-#=================================================================
-
-#/vis/disable
-/vis/open VRML2FILE
-/vis/viewer/reset
-/vis/drawVolume
-/tracking/storeTrajectory           1
-/vis/scene/add/trajectories
-/vis/scene/endOfEventAction         accumulate  20
-
-#=================================================================
 # T H E R M A L   A C T O R
 #=================================================================
 
@@ -116,6 +98,26 @@
 
 /gate/actor/addActor SimulationStatisticActor MyActor
 /gate/actor/MyActor/save Statistics.txt
+
+
+#=================================================================
+# INITIALISATION
+#=================================================================
+
+/gate/run/initialize
+
+#=================================================================
+# VISUALISATION
+#=================================================================
+
+#/vis/disable
+/vis/open VRML2FILE
+/vis/viewer/reset
+/vis/drawVolume
+/tracking/storeTrajectory           1
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction         accumulate  20
+
 
 #=================================================================
 # S O U R C E
